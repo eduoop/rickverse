@@ -1,1 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.css-1pi9rcw-MuiButtonBase-root-MuiPaginationItem-root {
+    color: #c9c9c9 !important;
+}

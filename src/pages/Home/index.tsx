@@ -6,7 +6,7 @@ import planet from '../../assets/planet.png'
 import { useParallax, Parallax } from 'react-scroll-parallax';
 import { TypeAnimation } from 'react-type-animation';
 import { api } from '../../config/api';
-import { Person } from '../../models/people.model';
+import { Character } from '../../models/character.model';
 import { NavLink } from 'react-router-dom';
 import { ApresentationCard } from '../../components/ApresentationCard';
 import { Episode } from '../../models/episode.model';
@@ -14,7 +14,7 @@ import { Location } from '../../models/location.model';
 
 export default function Home() {
 
-  const [person, setPerson] = useState<Person>()
+  const [person, setPerson] = useState<Character>()
   const [location, setLocation] = useState<Location>()
   const [episode, setEpisode] = useState<Episode>()
 

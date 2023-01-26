@@ -5,6 +5,8 @@ import { GlobalStyle } from './global/globalStyles';
 import Navbar from './components/Navbar';
 import { useState } from "react";
 import { MenuMobile } from "./components/MenuMobile";
+import { Characters } from "./pages/Characters";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <ScrollToTop />
         <MenuMobile
           menuIsVisible={menuIsVisible}
           setMenuIsVisible={setMenuIsVisible}
@@ -21,6 +24,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/characters' element={<Characters />} />
         </Routes>
       </BrowserRouter>
     </>
