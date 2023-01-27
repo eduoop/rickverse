@@ -11,24 +11,32 @@ export const Card = Styled.div`
     border-radius: 0.5rem;
     width: 500px;
     height: 220px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: auto;
+      }
 `
 
 export const ImgContainer = Styled.div`
     flex: 2 1 0%;
     width: 100%;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 `
 
 export const Img = Styled.img`
     width: 100%;
     height: 100%;
-    margin: 0px;
     opacity: 1;
     transition: opacity 0.5s ease 0s;
     object-position: center center;
     object-fit: cover;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: auto
+      }
 `
 
 export const Infos = Styled.div`
