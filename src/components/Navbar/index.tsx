@@ -11,7 +11,7 @@ const Navbar = () => {
     if(width > 600) {
       return 'px-3'
     } else {
-      return 'px-1'
+      return 'px-2'
     }
   }
 
