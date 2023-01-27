@@ -11,12 +11,14 @@ import { NavLink } from 'react-router-dom';
 import { ApresentationCard } from '../../components/ApresentationCard';
 import { Episode } from '../../models/episode.model';
 import { Location } from '../../models/location.model';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Home() {
 
   const [person, setPerson] = useState<Character>()
   const [location, setLocation] = useState<Location>()
   const [episode, setEpisode] = useState<Episode>()
+  const { height, width } = useWindowDimensions();
 
   const getSingleCharacter = () => {
     api.get("/character/2").then((res) => {
@@ -56,20 +58,20 @@ export default function Home() {
           <TypeAnimation
             sequence={[
               'A Rick end Morty site',
-              500,
+              2000,
               'Make with love by Eduardo',
-              1000
+              2000
             ]}
             wrapper="div"
             cursor={true}
             repeat={Infinity}
-            style={{ fontSize: '6em', fontWeight: "600", color: "white", textShadow: "2px 2px 5px black", fontFamily: "Comic Neue", textAlign: "center", lineHeight: "100px" }}
+            style={{ fontSize: `${width > 600 ? '6em': '3em'}`, fontWeight: "600", color: "white", textShadow: "2px 2px 5px black", fontFamily: "Comic Neue", textAlign: "center", lineHeight: "100px" }}
           />
         </PricipalText>
       </Main>
 
       <About>
-        <h1 className='text-3xl text-white font-bold text-center'>Descubra <NavLink className=' text-red' to='/characters'>Personagens,</NavLink> <NavLink className=' text-red' to='/locations'>Localizações</NavLink> e <NavLink className=' text-red' to='/episodes'>Epsodios</NavLink></h1>
+        <h1 className='text-3xl text-white font-bold text-center'>Discover <NavLink className=' text-red' to='/characters'>Characters,</NavLink> <NavLink className=' text-red' to='/locations'>Locations</NavLink> end <NavLink className=' text-red' to='/episodes'>Episodes</NavLink></h1>
 
         <ListCards>
           <ApresentationCard img={person?.image} infoOne={person?.status} infoTwo={person?.species} name={person?.name}/>
