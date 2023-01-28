@@ -65,7 +65,7 @@ export default function Home() {
             wrapper="div"
             cursor={true}
             repeat={Infinity}
-            style={{ fontSize: `${width > 600 ? '6em': '3em'}`, fontWeight: "600", color: "white", textShadow: "2px 2px 5px black", fontFamily: "Comic Neue", textAlign: "center", lineHeight: "100px" }}
+            style={{ fontSize: `${width > 600 ? '6em': '3em'}`, fontWeight: "600", color: "white", textShadow: "2px 2px 5px black", fontFamily: "Comic Neue", textAlign: "center", lineHeight: "55px" }}
           />
         </PricipalText>
       </Main>

@@ -11,6 +11,11 @@ export const Card = Styled.div`
     border-radius: 0.5rem;
     width: 500px;
     height: 220px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: auto;
+      }
 `
 
 export const ImgContainer = Styled.div`
@@ -28,6 +33,11 @@ export const Img = Styled.img`
     object-position: center center;
     object-fit: cover;
     border-radius: 0.5rem 0 0 0.5rem;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: auto
+      }
 
 `
 
