@@ -71,7 +71,7 @@ export default function Home() {
       </Main>
 
       <About>
-        <h1 className='text-3xl text-white font-bold text-center'>Discover <NavLink className=' text-red' to='/characters'>Characters,</NavLink> <NavLink className=' text-red' to='/locations'>Locations</NavLink> end <NavLink className=' text-red' to='/episodes'>Episodes</NavLink></h1>
+        <h1 className='text-3xl text-white font-bold text-center'>Descubra <NavLink className=' text-red' to='/characters'>Personagens,</NavLink> <NavLink className=' text-red' to='/locations'>Localizações</NavLink> e <NavLink className=' text-red' to='/episodes'>Epsódios</NavLink></h1>
 
         <ListCards>
           <ApresentationCard img={person?.image} infoOne={person?.status} infoTwo={person?.species} name={person?.name}/>
